@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>H5本地存储demo</h2>
+	<p>**=== 会话级存储（sessionStorage）** 永久存储（localStorage）=== **</p>
+
+	<h3>会话级存储（sessionStorage）</h3>
+	<p>1.会话级存储级在会话结束时，所存储的数据也会随之清空</p>
+	<p>2.会话级存储的数据其他页面无法读取</p>
+	<h3>永久存储（localStorage）</h3>
+	<p>1.永久性存储数据会一直存在客户端，除非你手动清除</p>
+	<p>2.永久性存储数据允许同源之下的其他页面访问、覆盖、写出、修改</p>
+
+	<h3>localStorage 和 sessionStorage 提供了四个方法来辅助我们进行对本地存储做相关操作。</h3>
+	<h3>永久存储（localStorage）</h3>
+	<p>（1）setItem(key,value)：添加本地存储数据。两个参数，非常简单就不说了。</p>
+	<p>（2）getItem(key):通过key获取相应的Value。</p>
+	<p>（3）removeItem(key):通过key删除本地数据。</p>
+	<p>（4）clear():清空数据。</p>
+</body>
+</html>
+<script>
+	// 永久性存储
+	localStorage.setItem('user','张三'); 			//数据永久性写入本地
+	var user1 = localStorage.getItem('user');		//从本地获取永久性数据
+	console.log(user1);
+
+	// 会话级存储
+	sessionStorage.setItem('user','李四');			//数据永久性写入本地
+	var user2 = sessionStorage.getItem('user');		//从本地获取永久性数据
+	console.log(user2);
+</script>
